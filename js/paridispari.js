@@ -7,14 +7,12 @@
 let userChoose;
 let userNumber;
 
-let ceckChoose;
-let ceckNumer;
-
 do{
   userChoose = prompt('Scegli "pari" o "dispari"?');
-  ceckChoose = userChoose;
-} while ((ceckChoose != 'pari') || (ceckChoose != 'dispari' ));
+} while ((userChoose != 'pari') && (userChoose != 'dispari' ));
 
-
+do{
+  userNumber = prompt('Scegli un numero tra 1 e 5');
+} while ((userNumber < 1) || (userNumber > 5 ));
 
 
