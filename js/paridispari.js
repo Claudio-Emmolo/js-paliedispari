@@ -7,6 +7,9 @@
 let userChoose;
 let userNumber;
 
+let ceckChoose;
+let ceckNumer;
+
 do{
   userChoose = prompt('Scegli "pari" o "dispari"?');
   ceckChoose = userChoose;
