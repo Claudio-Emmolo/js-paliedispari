@@ -23,36 +23,9 @@ console.log(`Il Computer ha scelto ${pcNumber}`);
 
 const calcWin = pcNumber + userNumber;
 
+const calcWinResult = ceckWin(calcWin);
 
-
-  if ((calcWin % 2 == 0) && (userChoose == 'pari')){
-
-    console.log('Che forza, hai vinto!!!');
-
-  } else if ( (calcWin % 2 == 1) && (userChoose == 'dispari')){
-
-    console.log('Che forza, hai vinto!!!');
-
-  } else{
-
-    console.log('Hai perso!!!');
-    
-  } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(calcWinResult);
 
 
 //-----------------------FUNZIONI-----------------------//
@@ -62,4 +35,20 @@ function getRandomNumer(starNumber, endNumber){
   const randomNumber = Math.floor(Math.random() * (endNumber - starNumber + 1) + starNumber);
   return parseInt((randomNumber), 10);
 
+}
+
+function ceckWin(calc){
+  if ((calcWin % 2 == 0) && (userChoose == 'pari')){
+
+    return ("Che forza, hai vinto!!!");
+
+  } else if ( (calcWin % 2 == 1) && (userChoose == 'dispari')){
+
+    return ("Che forza, hai vinto!!!");
+
+  } else{
+
+    return ("Hai perso!");
+    
+  } 
 }
