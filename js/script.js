@@ -10,17 +10,21 @@ function checkPalindrome(string) {
 
   const wordCalculate = string.length;
 
-  //Scorro le lettera della parole per metà della loro lunghezza ufficiale;
+  //Scorro le lettere della parola per metà della loro lunghezza ufficiale;
   for (let i = 0; i < wordCalculate / 2; i++) {
 
-    // Controlla se la prima lettera è diversa dall'ultima;
-      if (string[i] !== string[wordCalculate - (i + 1)]) {
+    // Controllo se la prima lettera è diversa dall'ultima;
+      if (string[i] != string[wordCalculate - (i + 1)]) {
           return 'Non è palindroma';
       }
   }
+
   return 'È palindroma';
 }
 
+const result = checkPalindrome(word);
+
+console.log (result);
 
 
 
