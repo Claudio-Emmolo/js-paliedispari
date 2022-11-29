@@ -15,4 +15,27 @@ do{
   userNumber = prompt('Scegli un numero tra 1 e 5');
 } while ((userNumber < 1) || (userNumber > 5 ));
 
+console.log(`Hai scelto ${userChoose}`, `e il numero ${userNumber}`);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-----------------------FUNZIONI-----------------------//
+
+function getRandomNumer(starNumber, endNumber){
+
+  const randomNumber = Math.floor(Math.random() * (endNumber - starNumber + 1) + starNumber);
+  return randomNumber;
+
+}
