@@ -12,10 +12,34 @@ do{
 } while ((userChoose != 'pari') && (userChoose != 'dispari' ));
 
 do{
-  userNumber = prompt('Scegli un numero tra 1 e 5');
+  userNumber = parseInt(prompt('Scegli un numero tra 1 e 5'), 10);
 } while ((userNumber < 1) || (userNumber > 5 ));
 
+
+const pcNumber = getRandomNumer(1, 5);
+
 console.log(`Hai scelto ${userChoose}`, `e il numero ${userNumber}`);
+console.log(`Il Computer ha scelto ${pcNumber}`);
+
+const calcWin = pcNumber + userNumber;
+
+
+
+  if ((calcWin % 2 == 0) && (userChoose == 'pari')){
+
+    console.log('Che forza, hai vinto!!!');
+
+  } else if ( (calcWin % 2 == 1) && (userChoose == 'dispari')){
+
+    console.log('Che forza, hai vinto!!!');
+
+  } else{
+
+    console.log('Hai perso!!!');
+    
+  } 
+
+
 
 
 
@@ -36,6 +60,6 @@ console.log(`Hai scelto ${userChoose}`, `e il numero ${userNumber}`);
 function getRandomNumer(starNumber, endNumber){
 
   const randomNumber = Math.floor(Math.random() * (endNumber - starNumber + 1) + starNumber);
-  return randomNumber;
+  return parseInt((randomNumber), 10);
 
 }
